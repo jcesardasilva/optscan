@@ -1,2 +1,7 @@
 __pycache__
 *.png
+build
+dist
+optscan.egg-info
+tests
+files.txt
