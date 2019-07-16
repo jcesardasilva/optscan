@@ -8,31 +8,33 @@ Installation
 
 Installation should be as simple as :
 
-   `sudo python setup.py install`
+   `sudo python3 setup.py install`
 
 or, for local installation, using the flag --user :
 
-   `python setup.py install --user`
+   `python3 setup.py install --user`
    
 Running examples
 ----------------
 
 You can edit the file round_roi_optim.py and run:
 
-  `python examples/basic_example.py`
+  `python3 examples/basic_example.py`
 
 Dependencies
 ------------
 
-Ptypy depends on standard python packages:
+Optscan depends on standard python packages:
  * numpy
  * matplotlib
  * ortools
+ * python >=3.6
 
 Credits
 -------
 
 Based on a code snippet originally posted here <https://developers.google.com/optimization/routing/tsp>
+
 And also here <https://github.com/google/or-tools/blob/stable/ortools/constraint_solver/samples/tsp_cities.py>
 
 References
