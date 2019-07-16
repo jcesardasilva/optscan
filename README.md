@@ -19,7 +19,7 @@ Running examples
 
 You can edit the file round_roi_optim.py and run:
 
-  `python3 examples/basic_example.py`
+  `python3 examples/round_roi_optim.py`
 
 Dependencies
 ------------
