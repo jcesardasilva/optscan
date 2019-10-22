@@ -2,7 +2,11 @@
 Optmization of scan grid for scanning microscopy using a solver for the travelling salesman program implemented in Google OR-Tools 
 <https://developers.google.com/optimization/routing/tsp>
 
-The implementation here is published here [[1]](https://doi.org/10.1107/S1600577519006301). We will be happy with your citation if you use it. 
+The implementation here is published here [[1]](https://doi.org/10.1107/S1600577519006301) and code has the following DOI in Zenodo:
+
+[![DOI](https://zenodo.org/badge/196174548.svg)](https://zenodo.org/badge/latestdoi/196174548)
+
+We will be happy with your citation if you use it. 
 
 Installation
 ------------
