@@ -59,12 +59,12 @@ def create_scan_grid(**params):
     data['depot'] = 0
     return data
 
-def compute_distance_matrix(locations, distance_method):
+def compute_distance_matrix(locations, distance_method, x_speed, y_speed):
     """
     Creates callback to return distance between points
     """
     distances = {}
-    distance_factor = 4 # strecth in one direction because of different of speed of motors
+    distance_factor = int(x_speed/y_speed) # strecth in one direction because of different of speed of motors
     for from_counter, from_node in enumerate(locations):
         distances[from_counter] = {}
         for to_counter, to_node in enumerate(locations):
@@ -104,7 +104,7 @@ def print_solution(manager, routing, assignment):
 
     return point_index_list
 
-def find_good_path(data, distance_method = "Euclidean"):
+def find_good_path(data, distance_method = "Euclidean", x_speed = 4, y_speed = 1):
     """
     Optimize the scan trajectory and returns a list of 2 lists:
     [ [Xcoords],  [Ycoords]]
@@ -124,7 +124,7 @@ def find_good_path(data, distance_method = "Euclidean"):
         routing = pywrapcp.RoutingModel(manager)
 
         # Create the distance matrix
-        distance_matrix = compute_distance_matrix(data['locations'],distance_method)
+        distance_matrix = compute_distance_matrix(data['locations'], distance_method, x_speed, y_speed)
 
         # Create the distance callback, which takes two arguments (the from and to node indices)
         # and returns the distance between these nodes.
