@@ -22,13 +22,13 @@ __all__=['get_path_statistics',
 
 PathStats = namedtuple('PathStats', ['x_len', 'y_len', 'p_tim'])
 
-def get_path_statistics(path):
+def get_path_statistics(path, x_speed, y_speed):
     """
     <path> : a list (or numpy array) of points
     Returns a namedtuple of infos about <path> : (hrz_length, vrt_length)
     """
-    x_speed = 4.0
-    y_speed = 1.0
+    #x_speed = 4.0
+    #y_speed = 1.0
 
     x_dists = [abs(j[0]-i[0]) for i, j in list(zip(path[:-1], path[1:]))]
     y_dists = [abs(j[1]-i[1]) for i, j in list(zip(path[:-1], path[1:]))]
